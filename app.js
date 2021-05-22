@@ -4,9 +4,15 @@ let flag = 0;
 cells.forEach((cell) => {
     cell.addEventListener('click', (e) => {
         if (flag == 1) location.reload();
-        if (cnt % 2 == 0) e.target.textContent = 'O';
-        else e.target.textContent = 'X';
-        cnt++;
+        if (cnt % 2 == 0){
+            if(e.target.textContent != 'X' || e.target.textContent != 'X') e.target.textContent = 'O';
+            cnt++;
+        } 
+        else{
+            if(e.target.textContent != 'X' || e.target.textContent != 'X') e.target.textContent = 'X'
+            cnt++;
+        } 
+      
         var temp = 0;
         for(var i = 0; i < 9; i++){
             if(cells[i].innerText == 'O' || cells[i].innerText == 'X') temp++;
