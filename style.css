@@ -9,6 +9,9 @@ body{
     font-family: 'Poppins', sans-serif;
 
 }
+p{
+    font-size: 2rem;
+}
 #board{
     
     padding-top: 3rem;
@@ -20,6 +23,7 @@ body{
     grid-template-columns: repeat(3, 1fr);
     width: 60vh;
     margin: auto;
+    font-size: 90px;
 }
 .item{
 
