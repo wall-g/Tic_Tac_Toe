@@ -7,6 +7,10 @@ cells.forEach((cell) => {
         if (cnt % 2 == 0) e.target.textContent = 'O';
         else e.target.textContent = 'X';
         cnt++;
+        var temp = 0;
+        for(var i = 0; i < 9; i++){
+            if(cells[i].innerText == 'O' || cells[i].innerText == 'X') temp++;
+        }
 
         //when X win
         if (cells[0].innerText == 'X' && cells[1].innerText == 'X' && cells[2].innerText == 'X') {
@@ -61,12 +65,7 @@ cells.forEach((cell) => {
             document.querySelector('p').innerText = 'O Win!';
             flag = 1;
         }
-        var temp = 0;
-        for(var i = 0; i < 9; i++){
-            if(cells[i].innerText == 'O' || cells[i].innerText == 'X') temp++;
-        }
-        console.log(temp);
-        if(temp == 9){
+        else if(temp == 9 && flag == 0){
             document.querySelector('p').innerText = 'Draw!';
             flag = 1;
         }
